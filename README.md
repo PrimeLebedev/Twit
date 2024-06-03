@@ -22,8 +22,96 @@
 
 ### Создание Twit
 
+Метод: POST
+
+URL: /twit
+
+Пример запроса:
+
+`http://localhost:5000/twit`
+
+Пример тела запроса:
+
+```json
+{
+    "id": 1,
+    "body": "Hello, Twit",
+    "author": "@aqaguy"
+}
+```
+Ответ:
+
+```json
+{
+    "status": "succsess"
+}
+```
+
 ### Чтение Twit
+
+Метод: GET
+
+URL: /twit
+
+Пример запроса:
+
+`http://localhost:5000/twit`
+
+Ответ:
+
+```json
+{
+    "twits": [
+        {
+            "author": "@aqaguy",
+            "body": "Hello, Twit",
+            "id": 1
+        }
+    ]
+}
+```
 
 ### Обновление Twit
 
+Метод: PUT
+
+URL: /twit/<int:twit_id>
+
+Пример запроса:
+
+`http://localhost:5000/twit/1`
+
+Пример тела запроса:
+
+```json
+{
+    "id": 1,
+    "body": "Updated Twit",
+    "author": "@aqaguy"
+}
+```
+Ответ:
+
+```json
+{
+    "status": "success"
+}
+```
+
 ### Удаление Twit
+
+Метод: DELETE
+
+URL: /twit/<int:twit_id>
+
+Пример запроса:
+
+`http://localhost:5000/twit/1`
+
+Ответ:
+
+```json
+{
+    "status": "success"
+}
+```
